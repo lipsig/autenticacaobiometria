@@ -12,6 +12,7 @@ const User = db.define('client',{
         type: DataTypes.STRING
     }
 },{
+    timestamps: false,
     freezeTableName: true
 });
  
