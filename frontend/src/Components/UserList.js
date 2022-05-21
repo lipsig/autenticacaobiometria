@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from "axios";
 import { Link } from "react-router-dom";
+import AddUser from './AddUser';
  
 const UserList = () => {
     const [users, setuser] = useState([]);
@@ -21,14 +22,13 @@ const UserList = () => {
  
     return (
         <div>
-            <Link to="/add" className="button is-primary mt-2">Add New</Link>
+            <AddUser/>
             <table className="table is-striped is-fullwidth">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>name</th>
-                        <th>template</th>
-                        <th>Actions</th>
+                        <th>N</th>
+                        <th>Nome Usuario</th>
+                        <th>FingerPrint Digital</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,10 +37,11 @@ const UserList = () => {
                             <td>{ index + 1 }</td>
                             <td>{ user.name }</td>
                             <td>{ user.template }</td>
+                            {/*
                             <td>
                                 <Link to={`/edit/${user.id}`} className="button is-small is-info">Edit</Link>
                                 <button onClick={ () => deleteuser(user.id) } className="button is-small is-danger">Delete</button>
-                            </td>
+                            </td>*/} 
                         </tr>
                     )) }
                      
