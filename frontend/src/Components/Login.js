@@ -30,7 +30,7 @@ export default function Login() {
                                 <span>Não possui conta?</span>
                             </Col>
                             <Col xs={6}>
-                                <Button href="#" variant="outline-primary" size="xs">Criar Cadastro</Button>
+                                <Button href="/create" variant="outline-primary" size="xs">Criar Cadastro</Button>
                             </Col>
                         </Row>
                     </Form>

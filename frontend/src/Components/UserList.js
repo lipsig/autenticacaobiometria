@@ -28,8 +28,7 @@ const UserList = () => {
         <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>
             <Container>
                 <Row className="justify-content-md-center">
-            
-                        <AddUser />
+                    <h2 className="mt-5">Contas Cadastradas:</h2>
                         <Row className="mt-5"> 
                         <Table responsive bordered hover style={{ tableLayout: 'fixed' }}>
                             <thead>
