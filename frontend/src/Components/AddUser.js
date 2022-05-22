@@ -1,5 +1,11 @@
 import { useState } from 'react'
 import axios from "axios";
+import Button from 'react-bootstrap/Button';
+import Row  from 'react-bootstrap/Row';
+import Col  from 'react-bootstrap/Col';
+import InputGroup  from 'react-bootstrap/InputGroup';
+import FormControl  from 'react-bootstrap/FormControl';
+
 
 const AddUser = () => {
     const [name, setname] = useState('');
@@ -33,23 +39,23 @@ const AddUser = () => {
     }
 
     return (
-        <div>
-            <div className="field">
-                <label className="label">name</label>
-                <input
-                    className="input"
-                    type="text"
-                    placeholder="name"
-                    value={name}
-                    onChange={(e) => setname(e.target.value)}
-                />
-            </div>
+        <Row className="mt-5">
+        <Col xs={6}  className="flex justify-content-md-start">
+                <InputGroup className="mb-3">
+                    <InputGroup.Text id="inputGroup-sizing-default">Nome</InputGroup.Text>
+                    <FormControl
+                        aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default"
+                        value={name}
+                        onChange={(e) => setname(e.target.value)}
+                    />
+                </InputGroup>       
+            </Col>
+            <Col xs={6} className="flex justify-content-md-end">
+                <Button onClick={()=> capture()} className="button is-primary">cadasstrar</Button>
+           </Col>
 
-            <div className="field">
-                <button onClick={()=> capture()} className="button is-primary">cadasstrar</button>
-            </div>
-
-        </div>
+        </Row>
     )
 }
 
