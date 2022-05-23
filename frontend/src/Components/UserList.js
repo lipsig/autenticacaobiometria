@@ -18,12 +18,6 @@ const UserList = () => {
         setuser(response.data);
     }
 
-    /*
-    const deleteuser = async (id) => {
-        await axios.delete(`http://localhost:5000/users/${id}`);
-        getusers();
-    }
-    */
     return (
         <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>
             <Container>
